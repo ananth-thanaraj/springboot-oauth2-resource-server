@@ -32,8 +32,6 @@ import com.ss.model.CustomClientResourceDetails;
 @Configuration
 @EnableResourceServer
 public class ResourceServer extends ResourceServerConfigurerAdapter{	
-
-	
 	
 	@Override
 	public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
@@ -61,7 +59,6 @@ public class ResourceServer extends ResourceServerConfigurerAdapter{
 	public RemoteTokenServices tokenService(){
 		RemoteTokenServices tokens = new RemoteTokenServices();
 		tokens.setCheckTokenEndpointUrl("http://localhost:8080/auth/oauth/check_token");
-		//tokens.setCheckTokenEndpointUrl("http://localhost:8080/auth/oauth/authorize");
 		tokens.setClientId("my-client");
 		tokens.setClientSecret("password");
 		return tokens;
